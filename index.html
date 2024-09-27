@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="estilo.css" rel="stylesheet">
+    <title>Jogo de Adivinhação de Pokémon</title>
+</head>
+
+<body>
+    <div id="loginArea" class="sidebar">
+        <h1 class="sidebar-heading">Login <i class="bi bi-pokeball"></i></h1>
+        <input type="text" id="username" placeholder="Nome de usuário" required class="form-control">
+        <button id="loginButton" class="btn btn-pokemon">Entrar</button>
+    </div>
+    
+    <div id="gameArea" style="display: none;">
+        <h1>Adivinhe o Pokémon!</h1>
+        <img id="pokemonImage" alt="Imagem do Pokémon" style="display: none; width: 200px;">
+        <div id="options"></div>
+        <div id="timer" class="sidebar-heading"></div>
+        <div id="result"></div>
+        
+        <div id="scoreArea">
+            Nível: <span id="levelDisplay">1</span> | Pontos: <span id="scoreDisplay">0</span>
+        </div>
+
+    
+        <div id="levelBar" style="width: 100%; background: #eee; margin-top: 10px;">
+            <div id="currentLevelBar" style="width: 0%; height: 20px; background: green;"></div>
+        </div>
+
+        <button id="nextButton" style="display:none;" class="btn btn-pokemon">Próximo</button>
+        <button id="logoutButton" class="btn btn-pokemon">Sair</button>
+
+      
+        <table id="leaderboardTable" style="margin-top: 20px; width: 100%; display: none;">
+            <tr>
+                <th>Username</th>
+                <th>Score</th>
+                <th>Level</th>
+            </tr>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
